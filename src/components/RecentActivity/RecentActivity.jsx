@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
-import activities from "../../data/activities";
 
-function RecentActivity() {
+function RecentActivity({ items }) {
   const { t } = useTranslation();
 
   const statusColor = {
@@ -18,7 +17,6 @@ function RecentActivity() {
           <h2 className="text-xl font-semibold text-slate-900">
             {t("recentActivity.title")}
           </h2>
-
           <p className="text-sm text-slate-500">
             {t("recentActivity.subtitle")}
           </p>
@@ -26,22 +24,16 @@ function RecentActivity() {
       </div>
 
       <div className="space-y-4">
-        {activities.map((item) => (
+        {items.map((item) => (
           <div
             key={item.id}
             className="border rounded-xl p-4 hover:bg-slate-50 transition"
           >
-            <span
-              className={`text-xs font-semibold uppercase ${statusColor[item.status]}`}
-            >
+            <span className={`text-xs font-semibold uppercase ${statusColor[item.status]}`}>
               {t(`status.${item.status.toLowerCase()}`)}
             </span>
 
-            {/* activity/ward/officer/time come from dummy data (activities.js)
-                and are not translated via i18n JSON — rendered as-is. */}
-            <h3 className="font-semibold mt-1">
-              {item.activity}
-            </h3>
+            <h3 className="font-semibold mt-1">{item.activity}</h3>
 
             <div className="flex justify-between mt-3 text-xs text-slate-500">
               <span>{item.ward}</span>

@@ -1,10 +1,19 @@
+import { useState, useEffect } from "react";
 import { Bell, Globe, ShieldCheck, UserCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 function Header() {
   const { t, i18n } = useTranslation();
+  const [now, setNow] = useState(new Date());
 
-  const now = new Date();
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNow(new Date());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const dateLocale = i18n.language === "mr" ? "mr-IN" : "en-IN";
 
   const date = now.toLocaleDateString(dateLocale, {

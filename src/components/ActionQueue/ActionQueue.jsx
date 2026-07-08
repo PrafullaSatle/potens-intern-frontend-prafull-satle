@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
-import priorities from "../../data/priorities";
 import ActionItem from "./ActionItem";
 
-function ActionQueue() {
+function ActionQueue({ items, onApprove, onHold }) {
   const { t } = useTranslation();
 
   return (
@@ -19,11 +18,10 @@ function ActionQueue() {
         </div>
 
         <span className="text-xs md:text-sm bg-slate-100 px-3 py-1 rounded-full whitespace-nowrap">
-          {priorities.length} {t("actionQueue.pending")}
+          {items.length} {t("actionQueue.pending")}
         </span>
       </div>
 
-      {/* Table header — visible from md upward only */}
       <div className="hidden md:grid grid-cols-[100px_1fr_70px_90px_70px_120px] gap-3 px-3 py-2 text-xs font-semibold text-slate-400 uppercase bg-slate-50 rounded-t-lg border-b border-slate-200">
         <span>{t("actionQueue.priority")}</span>
         <span>{t("actionQueue.task")}</span>
@@ -34,12 +32,20 @@ function ActionQueue() {
       </div>
 
       <div className="divide-y divide-slate-200">
-        {priorities.map((item) => (
-          <ActionItem
-            key={item.id}
-            item={item}
-          />
-        ))}
+        {items.length === 0 ? (
+          <p className="text-sm text-slate-400 text-center py-6">
+            {t("actionQueue.empty", "No pending items")}
+          </p>
+        ) : (
+          items.map((item) => (
+            <ActionItem
+              key={item.id}
+              item={item}
+              onApprove={onApprove}
+              onHold={onHold}
+            />
+          ))
+        )}
       </div>
     </section>
   );
