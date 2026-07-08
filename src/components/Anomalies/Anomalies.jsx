@@ -5,9 +5,9 @@ function Anomalies() {
   const { t } = useTranslation();
 
   const severityColor = {
-    Critical: "text-red-600",
-    High: "text-amber-600",
-    Medium: "text-sky-600",
+    Critical: "bg-red-50 text-red-700",
+    High: "bg-amber-50 text-amber-700",
+    Medium: "bg-sky-50 text-sky-700",
   };
 
   return (
@@ -28,7 +28,7 @@ function Anomalies() {
         </span>
       </div>
 
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {anomalies.map((item) => (
           <div
             key={item.id}
@@ -38,7 +38,7 @@ function Anomalies() {
 
               <div>
                 <span
-                  className={`text-xs font-semibold uppercase ${severityColor[item.severity]}`}
+                  className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ${severityColor[item.severity]}`}
                 >
                   {t(`priority.${item.severity.toLowerCase()}`)}
                 </span>

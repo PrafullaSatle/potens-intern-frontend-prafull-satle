@@ -5,7 +5,7 @@ import RecentActivity from "../RecentActivity/RecentActivity";
 
 function DashboardLayout() {
   return (
-    <main className="max-w-7xl mx-auto p-6">
+    <main className="max-w-[calc(100vw-60px)] mx-auto px-4 py-6">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
         {/* Left Section */}

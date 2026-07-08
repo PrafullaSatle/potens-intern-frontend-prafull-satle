@@ -12,7 +12,13 @@
     "subtitle": "Top 5 operational issues requiring decisions",
     "pending": "Pending",
     "approve": "Approve",
-    "hold": "Hold"
+    "hold": "Hold",
+    "priority": "Priority",
+    "task": "Task",
+    "ward": "Ward",
+    "reported": "Reported",
+    "sla": "SLA",
+    "action": "Action"
   },
 
   "anomalies": {
