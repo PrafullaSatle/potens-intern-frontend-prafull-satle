@@ -1,0 +1,62 @@
+{
+  "header": {
+    "title": "CivicPulse",
+    "subtitle": "Municipal Operations Cockpit",
+    "language": "Language",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  },
+
+  "actionQueue": {
+    "title": "Today's Action Queue",
+    "subtitle": "Top 5 operational issues requiring decisions",
+    "pending": "Pending",
+    "approve": "Approve",
+    "hold": "Hold"
+  },
+
+  "anomalies": {
+    "title": "Anomalies",
+    "subtitle": "Automated system alerts requiring review",
+    "active": "Active",
+    "review": "Review",
+    "confidence": "Confidence"
+  },
+
+  "operationsPulse": {
+    "title": "Operations Pulse",
+    "subtitle": "Live overview of today's municipal operations",
+    "openRequests": "Open Requests",
+    "activeIncidents": "Active Incidents",
+    "resolvedToday": "Resolved Today",
+    "responseRate": "Response Rate",
+    "live": "Live"
+  },
+
+  "recentActivity": {
+    "title": "Recent Activity",
+    "subtitle": "Latest operational updates across wards"
+  },
+
+  "priority": {
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium"
+  },
+
+  "status": {
+    "approved": "Approved",
+    "assigned": "Assigned",
+    "escalated": "Escalated",
+    "completed": "Completed"
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

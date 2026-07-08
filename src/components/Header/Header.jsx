@@ -1,16 +1,26 @@
 import { Bell, Globe, ShieldCheck, UserCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 function Header() {
-  const now = new Date();
+  const { t, i18n } = useTranslation();
 
-  const date = now.toLocaleDateString("en-IN", {
+  const now = new Date();
+  const dateLocale = i18n.language === "mr" ? "mr-IN" : "en-IN";
+
+  const date = now.toLocaleDateString(dateLocale, {
     weekday: "long",
     day: "numeric",
     month: "long",
     year: "numeric",
   });
 
-  const time = now.toLocaleTimeString("en-IN");
+  const time = now.toLocaleTimeString(dateLocale);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "mr" : "en";
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("appLanguage", newLang);
+  };
 
   return (
     <header className="bg-slate-900 text-white border-b border-slate-700">
@@ -24,11 +34,11 @@ function Header() {
 
           <div>
             <h1 className="text-lg font-bold tracking-wide">
-              CivicPulse
+              {t("header.title")}
             </h1>
 
             <p className="text-sm text-slate-300">
-              Municipal Operations Cockpit
+              {t("header.subtitle")}
             </p>
           </div>
         </div>
@@ -47,16 +57,20 @@ function Header() {
         {/* Right */}
         <div className="flex items-center gap-5">
 
-          <button className="flex items-center gap-2 text-sm hover:text-emerald-400 transition">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 text-sm hover:text-emerald-400 transition"
+            aria-label={t("header.language")}
+          >
             <Globe size={18} />
-            EN | मराठी
+            {i18n.language === "en" ? "EN | मराठी" : "मराठी | EN"}
           </button>
 
-          <button className="hover:text-emerald-400 transition">
+          <button className="hover:text-emerald-400 transition" aria-label={t("header.notifications")}>
             <Bell size={20} />
           </button>
 
-          <button className="hover:text-emerald-400 transition">
+          <button className="hover:text-emerald-400 transition" aria-label={t("header.profile")}>
             <UserCircle size={24} />
           </button>
 

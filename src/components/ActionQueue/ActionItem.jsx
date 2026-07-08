@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 function ActionItem({ item }) {
+  const { t } = useTranslation();
+
   const priorityStyle = {
     Critical: "bg-red-50 text-red-700",
     High: "bg-amber-50 text-amber-700",
@@ -15,9 +19,11 @@ function ActionItem({ item }) {
           <span
             className={`inline-flex px-2 py-1 rounded-full text-xs font-semibold uppercase ${priorityStyle[item.priority]}`}
           >
-            {item.priority}
+            {t(`priority.${item.priority.toLowerCase()}`)}
           </span>
 
+          {/* Note: task/context/ward/reported come from dummy data (priorities.js)
+              and are not translated via i18n JSON — they're rendered as-is. */}
           <h3 className="mt-2 text-base font-semibold text-slate-900">
             {item.task}
           </h3>
@@ -44,11 +50,11 @@ function ActionItem({ item }) {
         <div className="flex gap-2 self-center">
 
           <button className="rounded-lg bg-emerald-600 px-3 py-1.5 text-sm text-white hover:bg-emerald-700 transition">
-            Approve
+            {t("actionQueue.approve")}
           </button>
 
           <button className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-100 transition">
-            Hold
+            {t("actionQueue.hold")}
           </button>
 
         </div>

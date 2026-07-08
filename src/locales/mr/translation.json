@@ -1,0 +1,62 @@
+{
+  "header": {
+    "title": "सिविकपल्स",
+    "subtitle": "महानगरपालिका संचालन डॅशबोर्ड",
+    "language": "भाषा",
+    "notifications": "सूचना",
+    "profile": "प्रोफाइल"
+  },
+
+  "actionQueue": {
+    "title": "आजची कृती यादी",
+    "subtitle": "निर्णय आवश्यक असलेल्या प्रमुख समस्या",
+    "pending": "प्रलंबित",
+    "approve": "मंजूर",
+    "hold": "स्थगित"
+  },
+
+  "anomalies": {
+    "title": "असामान्यता",
+    "subtitle": "स्वयंचलित प्रणालीने शोधलेल्या समस्या",
+    "active": "सक्रिय",
+    "review": "पुनरावलोकन",
+    "confidence": "विश्वासार्हता"
+  },
+
+  "operationsPulse": {
+    "title": "संचालन स्थिती",
+    "subtitle": "आजच्या महानगरपालिका कामकाजाचा आढावा",
+    "openRequests": "प्रलंबित विनंत्या",
+    "activeIncidents": "सक्रिय घटना",
+    "resolvedToday": "आज निकाली काढले",
+    "responseRate": "प्रतिसाद दर",
+    "live": "थेट"
+  },
+
+  "recentActivity": {
+    "title": "अलीकडील कार्यवाही",
+    "subtitle": "विविध विभागांतील नवीन अद्यतने"
+  },
+
+  "priority": {
+    "critical": "गंभीर",
+    "high": "उच्च",
+    "medium": "मध्यम"
+  },
+
+  "status": {
+    "approved": "मंजूर",
+    "assigned": "नियुक्त",
+    "escalated": "वाढवले",
+    "completed": "पूर्ण"
+  },
+
+  "common": {
+    "loading": "लोड होत आहे...",
+    "save": "जतन करा",
+    "cancel": "रद्द करा",
+    "close": "बंद करा",
+    "yes": "होय",
+    "no": "नाही"
+  }
+}
