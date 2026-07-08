@@ -1,9 +1,11 @@
+import Header from "./components/Header/Header";
+import DashboardLayout from "./components/Layout/DashboardLayout";
+
 function App() {
   return (
-    <div className="min-h-screen bg-slate-100 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-slate-800">
-        Municipal Operations Cockpit
-      </h1>
+    <div className="min-h-screen bg-slate-100">
+      <Header />
+      <DashboardLayout />
     </div>
   );
 }
