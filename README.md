@@ -266,7 +266,8 @@ The project was developed using AI tools as engineering assistants. AI was prima
 
 | Tool | Approximate Usage | Purpose |
 |------|-------------------|---------|
-| ChatGPT | ~90 development-focused prompts | UI/UX discussions, React & Tailwind debugging, component review, implementation guidance, code review, and README refinement. |
+| ChatGPT | ~80 development-focused prompts | UI/UX discussions, React & Tailwind debugging, component review, implementation guidance, code review, and README refinement. |
+| Claude AI | ~10 prompts | UI refinement, layout review |
 | Figma AI | 1 prompt | Generated an initial dashboard layout concept for UI inspiration. |
 
 Final implementation decisions, feature integration, testing, responsiveness improvements, and validation were performed by the project author.
